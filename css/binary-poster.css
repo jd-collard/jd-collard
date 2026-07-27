@@ -78,7 +78,11 @@ img {
 }
 
 .site-header {
-  padding: 56px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 24px 0 0;
+  background: var(--paper);
 }
 
 .header-wrap {
@@ -87,7 +91,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--soft);
 }
 
@@ -119,7 +123,7 @@ img {
 }
 
 .hero {
-  padding-top: 112px;
+  padding-top: 56px;
   padding-bottom: 86px;
 }
 
@@ -277,14 +281,14 @@ h2 {
   }
 
   .site-header {
-    padding-top: 28px;
+    padding-top: 20px;
   }
 
   .header-wrap {
     align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
-    padding-bottom: 24px;
+    gap: 16px;
+    padding-bottom: 16px;
   }
 
   .nav {
@@ -299,7 +303,7 @@ h2 {
   }
 
   .hero {
-    padding-top: 72px;
+    padding-top: 40px;
     padding-bottom: 56px;
   }
 
