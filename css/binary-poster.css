@@ -270,85 +270,6 @@ h2 {
   font-weight: 900;
 }
 
-.posthaven-section .strong {
-  margin-bottom: 24px;
-}
-
-.posthaven-feed {
-  display: flex;
-  flex-direction: column;
-}
-
-.posthaven-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--soft);
-  color: var(--ink);
-  font-size: 19px;
-  line-height: 28px;
-  font-weight: 900;
-}
-
-.posthaven-link .arrow {
-  color: var(--muted);
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.posthaven-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 18px 0;
-  border-top: 1px solid var(--soft);
-  color: var(--ink);
-}
-
-.posthaven-item:first-child {
-  border-top: 1px solid var(--ink);
-}
-
-.posthaven-item:last-child {
-  border-bottom: 1px solid var(--soft);
-}
-
-.posthaven-item .ph-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.posthaven-item .ph-title {
-  font-size: 19px;
-  line-height: 26px;
-  font-weight: 900;
-  letter-spacing: -0.01em;
-}
-
-.posthaven-item .ph-date {
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.posthaven-item .ph-excerpt {
-  margin: 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: 400;
-}
-
-.posthaven-item:hover .ph-title {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 @media (max-width: 760px) {
   body {
     font-size: 17px;
@@ -437,11 +358,5 @@ h2 {
 
   .tech-link:nth-last-child(2) {
     border-bottom: 0;
-  }
-
-  .posthaven-item .ph-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
   }
 }
