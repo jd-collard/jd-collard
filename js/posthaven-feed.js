@@ -4,7 +4,7 @@
   var feedUrl = container.getAttribute('data-feed');
   if (!feedUrl) return;
 
-  var proxy = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl);
+  var proxy = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=5';
 
   fetch(proxy)
     .then(function (r) { return r.json(); })
@@ -19,14 +19,26 @@
         if (date && !isNaN(date)) {
           dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
         }
+        var excerpt = makeExcerpt(item.content || item.description || '', 220);
         return '<a class="posthaven-item" href="' + link + '" target="_blank" rel="noopener noreferrer">' +
-          '<span class="ph-title">' + escapeHtml(title) + '</span>' +
-          (dateStr ? '<span class="ph-date">' + dateStr + '</span>' : '') +
+          '<div class="ph-head">' +
+            '<span class="ph-title">' + escapeHtml(title) + '</span>' +
+            (dateStr ? '<span class="ph-date">' + dateStr + '</span>' : '') +
+          '</div>' +
+          (excerpt ? '<p class="ph-excerpt">' + escapeHtml(excerpt) + '</p>' : '') +
           '</a>';
       }).join('');
       if (html) container.innerHTML = html;
     })
     .catch(function () {});
+
+  function makeExcerpt(html, max) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    var text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+    if (text.length <= max) return text;
+    return text.slice(0, max).replace(/\s+\S*$/, '') + '…';
+  }
 
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, function (c) {
