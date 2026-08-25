@@ -1,60 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signal Lost — 404 — Jean-David Collard</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting — Jean-David Collard</title>
   <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="0; url=/" />
+  <link rel="canonical" href="https://www.jdcollard.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="css/binary-poster.css" rel="stylesheet" />
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <style>
-    .lost { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; padding-block: 80px; }
-    .lost .code { font-size: var(--step-7); font-weight: 800; letter-spacing: -0.05em; line-height: 0.9; margin: 0; }
-    .lost .code .em { color: var(--phosphor); }
-    .lost p { color: var(--scan); font-size: var(--step-2); max-width: 34ch; margin: 24px 0 34px; line-height: 1.2; font-weight: 500; }
-    .lost .home {
-      display: inline-flex; align-items: center; gap: 10px; align-self: flex-start;
-      background: var(--phosphor); color: var(--ink); padding: 12px 18px;
-      font-family: var(--mono); font-size: var(--step--1); text-transform: uppercase;
-      letter-spacing: 0.14em; font-weight: 700; transition: transform .16s ease;
-    }
-    .lost .home:hover { transform: translate(2px,-2px); }
-  </style>
+  <script>
+    window.location.replace("/");
+  </script>
 </head>
 <body>
-<header class="site">
-  <div class="shell site-inner">
-    <a class="brand" href="index.html" aria-label="Jean-David Collard — home">
-      <span class="monogram" aria-hidden="true">JD</span>
-    </a>
-    <div class="header-mid">
-      <nav class="primary" aria-label="Primary">
-        <a href="companies-projects.html">Work</a>
-        <a href="papers-awards.html">Papers</a>
-        <a href="notes/">Notes</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-    <div class="status">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="txt">Open to conversations</span>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="lost">
-    <div class="shell">
-      <div class="meta" style="margin-bottom:22px;">ERROR · 404 — SIGNAL LOST</div>
-      <p class="code">404<span class="em">.</span></p>
-      <p>This page is off the grid. The signal you followed doesn't resolve.</p>
-      <a class="home" href="index.html">Return to index <span aria-hidden="true">↗</span></a>
-    </div>
-  </section>
-</main>
-
+  <main id="main">
+    <section class="hero section">
+      <div class="wrap prose">
+        <p class="kicker">Redirecting</p>
+        <h1>Jean-David Collard</h1>
+        <p class="lead">This page has moved to the homepage.</p>
+        <p class="muted"><a href="/">Go to the homepage</a></p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
